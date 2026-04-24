@@ -20,22 +20,25 @@ The Internet Ontology Framework (IOF) introduces a multi-dimensional model that 
 
 The IOF separates semantic classification from measurement endpoints, enabling extensibility, neutrality, and applicability across domains such as industrial systems, public infrastructure, digital platforms, and federated data ecosystems.
 
+**The IOF is explicitly scoped to availability analysis for economic, industrial, and innovation-driven purposes. While the framework could be applied to other domains (e.g., security or intelligence analysis), such uses are out of scope. The framework aligns with principles of open innovation, interoperability, and responsible technology development as promoted within European research and innovation ecosystems.**
+
 ---
 
 ## Table of Contents
 
 1. Introduction
 2. Terminology
-3. Architectural Overview
-4. Perspective Dimension
-5. Domain Dimension
-6. Meta-Dimensions
-7. Data Model
-8. Semantic Interpretation
-9. Design Considerations
-10. Security Considerations
-11. IANA Considerations
-12. References
+3. Scope and Non-Goals
+4. Architectural Overview
+5. Perspective Dimension
+6. Domain Dimension
+7. Meta-Dimensions
+8. Data Model
+9. Semantic Interpretation
+10. Design Considerations
+11. Security Considerations
+12. IANA Considerations
+13. References
 
 ---
 
@@ -53,6 +56,7 @@ This document defines an ontology that enables structured modeling of Internet o
 * Multi-perspective analysis
 * Domain-specific evaluation
 * Resilience and fragmentation assessment
+* Economic and industrial availability analysis
 
 ---
 
@@ -74,7 +78,51 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 
 ---
 
-## 3. Architectural Overview
+## 3. Scope and Non-Goals
+
+### 3.1 Scope
+
+The IOF defines a conceptual and technical framework for:
+
+* Modeling Internet reachability across multiple perspectives
+* Evaluating functional availability of economically relevant systems
+* Supporting resilience analysis in industrial and digital ecosystems
+* Enabling interoperability across monitoring and observability systems
+
+The framework is explicitly oriented toward:
+
+* Economic processes
+* Industrial supply chains
+* Digital platforms and ecosystems
+* Innovation infrastructures
+
+---
+
+### 3.2 Non-Goals
+
+The IOF does NOT:
+
+* Define network protocols or transport mechanisms
+* Provide mechanisms for active interference or control of systems
+* Target intelligence gathering, surveillance, or offensive security use cases
+* Guarantee completeness of global Internet representation
+
+---
+
+### 3.3 Ethical and Regulatory Alignment
+
+Implementations of the IOF SHOULD align with:
+
+* Principles of open innovation
+* Interoperability and standardization
+* Transparency and accountability
+* Respect for legal and regulatory constraints
+
+The framework is designed to be consistent with European approaches to digital sovereignty, industrial data spaces, and collaborative innovation ecosystems.
+
+---
+
+## 4. Architectural Overview
 
 The IOF defines three orthogonal dimensions:
 
@@ -88,9 +136,9 @@ These dimensions are independent and composable.
 
 ---
 
-## 4. Perspective Dimension
+## 5. Perspective Dimension
 
-### 4.1 Overview
+### 5.1 Overview
 
 The framework defines three primary views:
 
@@ -102,11 +150,11 @@ The framework defines three primary views:
 
 ---
 
-### 4.2 Local View
+### 5.2 Local View
 
 The Local View describes reachability from the perspective of a specific node or network environment.
 
-#### 4.2.1 Scope Classification
+#### 5.2.1 Scope Classification
 
 | Scope    | Description                      |
 | -------- | -------------------------------- |
@@ -120,11 +168,11 @@ Implementations SHOULD use the Local View to diagnose segmentation, routing, and
 
 ---
 
-### 4.3 Global View
+### 5.3 Global View
 
 The Global View models the Internet as a distributed system.
 
-#### 4.3.1 Aspects
+#### 5.3.1 Aspects
 
 | Aspect        | Description                          |
 | ------------- | ------------------------------------ |
@@ -138,7 +186,7 @@ Implementations SHOULD consider regional diversity when evaluating Global View r
 
 ---
 
-### 4.4 Strategic View
+### 5.4 Strategic View
 
 The Strategic View evaluates the availability of systems that are critical to societal and economic functions.
 
@@ -146,9 +194,9 @@ This view abstracts from pure connectivity and focuses on functional operability
 
 ---
 
-## 5. Domain Dimension
+## 6. Domain Dimension
 
-### 5.1 Overview
+### 6.1 Overview
 
 Domains classify nodes based on functional role.
 
@@ -165,16 +213,16 @@ Domains classify nodes based on functional role.
 
 ---
 
-### 5.2 Domain Requirements
+### 6.2 Domain Requirements
 
 Implementations SHOULD assign nodes to at least one domain.
 Nodes MAY belong to multiple domains if functionally justified.
 
 ---
 
-## 6. Meta-Dimensions
+## 7. Meta-Dimensions
 
-### 6.1 Geography
+### 7.1 Geography
 
 | Attribute | Description               |
 | --------- | ------------------------- |
@@ -184,7 +232,7 @@ Regions SHOULD be defined consistently across implementations.
 
 ---
 
-### 6.2 Access Type
+### 7.2 Access Type
 
 | Type       | Description                          |
 | ---------- | ------------------------------------ |
@@ -195,7 +243,7 @@ Regions SHOULD be defined consistently across implementations.
 
 ---
 
-### 6.3 Protocol
+### 7.3 Protocol
 
 | Protocol | Description               |
 | -------- | ------------------------- |
@@ -206,7 +254,7 @@ Regions SHOULD be defined consistently across implementations.
 
 ---
 
-### 6.4 Measurement Type
+### 7.4 Measurement Type
 
 | Type         | Description         |
 | ------------ | ------------------- |
@@ -217,7 +265,7 @@ Regions SHOULD be defined consistently across implementations.
 
 ---
 
-### 6.5 Criticality
+### 7.5 Criticality
 
 | Level | Description        |
 | ----- | ------------------ |
@@ -231,7 +279,7 @@ Criticality SHOULD be used for weighting and prioritization.
 
 ---
 
-## 7. Data Model
+## 8. Data Model
 
 The following abstract data model is RECOMMENDED:
 
@@ -271,41 +319,45 @@ Implementations MAY extend this model.
 
 ---
 
-## 8. Semantic Interpretation
+## 9. Semantic Interpretation
 
 The IOF enables interpretation across three layers:
 
-| Layer      | Description                       |
-| ---------- | --------------------------------- |
-| Physical   | Network reachability              |
-| Functional | Service operability               |
-| Systemic   | Preservation of societal function |
+| Layer      | Description                                    |
+| ---------- | ---------------------------------------------- |
+| Physical   | Network reachability                           |
+| Functional | Service operability                            |
+| Systemic   | Preservation of societal and economic function |
 
 Implementations SHOULD distinguish between these layers to avoid misinterpretation.
 
 ---
 
-## 9. Design Considerations
+## 10. Design Considerations
 
-### 9.1 Separation of Concerns
+### 10.1 Separation of Concerns
 
 Semantic classification MUST be independent of measurement endpoints.
 
-### 9.2 Extensibility
+### 10.2 Extensibility
 
 The ontology MUST allow addition of new domains and attributes.
 
-### 9.3 Neutrality
+### 10.3 Neutrality
 
 The framework MUST NOT assume geographic or political bias.
 
-### 9.4 Partial Failure
+### 10.4 Partial Failure
 
 The model MUST support partial connectivity scenarios.
 
+### 10.5 Purpose Limitation
+
+Implementations SHOULD ensure that the framework is used for availability and resilience analysis in economic and innovation contexts.
+
 ---
 
-## 10. Security Considerations
+## 11. Security Considerations
 
 The IOF itself does not introduce new network protocols. However:
 
@@ -317,23 +369,24 @@ Implementations SHOULD respect legal and policy constraints.
 
 ---
 
-## 11. IANA Considerations
+## 12. IANA Considerations
 
 This document has no IANA actions.
 
 ---
 
-## 12. References
+## 13. References
 
 * RFC 2119
 
 ---
 
-## 13. Conclusion
+## 14. Conclusion
 
 The Internet Ontology Framework (IOF) provides a structured approach to modeling Internet observability beyond binary connectivity. By integrating multiple perspectives, domains, and meta-dimensions, it enables a comprehensive understanding of Internet state in technical, functional, and systemic terms.
+
+The framework explicitly focuses on economic and industrial availability analysis, aligned with principles of responsible innovation and interoperability.
 
 Future work includes mapping ontology nodes to concrete measurement endpoints and defining standardized evaluation procedures.
 
 ---
-
