@@ -1,5 +1,4 @@
-Alles klar – ich habe genug Klarheit, um das konsistent und vollständig aufzubauen.
-Ich liefere dir jetzt eine **komplette, lauffähige GitHub-Datenstruktur** inkl.:
+# Architecture
 
 * Governance-Profile
 * Policies (mit Regex & Referenzen)
